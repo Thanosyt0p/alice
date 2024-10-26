@@ -15,16 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
-jobs:
-build:
-run-on:ubuntu-latest
-steps:
- - uses: actions/checkout@v4
- - name: Running
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s
  run: pip install pyrogram
  run: pip install dotenv
- run: tmrx
-run: termux
  run: bash start
