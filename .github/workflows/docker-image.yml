@@ -18,4 +18,5 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s
  run: pip install pyrogram
  run: pip install dotenv
+run: sudo apt install tmux -y && tmux
  run: bash start
