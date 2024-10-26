@@ -16,7 +16,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s
- run: pip install pyrogram
- run: pip install dotenv
+ run: sudo apt-get update && sudo apt-get upgrade -y
+ run: sudo apt-get install python3-pip ffmpeg -y
+run: sudo pip3 install -U pip
+run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && source ~/.bashrc && nvm install v18
+ run: pip3 install -U -r requirements.txt
+ run: cp sample.env .env
 run: sudo apt install tmux -y && tmux
  run: bash start
